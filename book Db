@@ -1,0 +1,38 @@
+SERVIDOR:
+APIS:
+  * recibe nombre, apellido, mail, usuario y contraseña, guarda usuario en la db; devuelve OK
+  * recibe usuario y contraseña, devuelve OK si está en la base
+  * devuelve los últimos 4 libros ingresados (PENDIENTE: falta campo fecha_ingreso en base de datos)
+  * devuelve los 4 libros que están en más usuarios (ver foto wpp de la base) → los más populares
+  * recibe usuario, devuelve libros guardados del usuario
+  * recibe usuario, devuelve libros leídos del usuario y la última página
+  * búsqueda: recibe "buscador", devuelve los libros con info LIKE la búsqueda
+  
+
+To connect using the mongo shell:
+mongo ds045077.mlab.com:45077/netbook-db -u natinver -p sistDist2018
+
+To connect using a driver via the standard MongoDB URI
+mongodb://natinver:sistDist2018@ds045077.mlab.com:45077/netbook-db
+
+EJEMPLO
+
+{
+    "_id": 2,
+    "title": "El Principito",
+    "original-title": "Le Petit Prince",
+    "author": [
+        "Antoine de Saint-Exupery"
+    ],
+    "year": 1943,
+    "genre": "Novela",
+    "subgenre": [
+        "Novela filosófica",
+        "Novela infantil",
+        "Literatura juvenil"
+    ],
+    "number-of-pages": 33,
+    "cover": "ServerRepo/books/covers/2.jpg",
+    "book": "ServerRepo/books/books/2.pdf",
+    "description": "Perdido en medio del desierto a causa de un desperfecto en su avión, el aviador conoce a un singular personaje: un principito, único habitante del asteroide B-612, que dejó su hogar en busca de nuevos horizontes. Se entabla entre ellos una entrañable amistad que interpelará al protagonista y a los lectores."
+}
